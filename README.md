@@ -1,3 +1,6 @@
+[![Build status](https://badge.buildkite.com/b5fefd9dc4d3c6477c80cb88913468f0d30a23f6e51c8a6093.svg)](https://buildkite.com/theopenlane/echo-prometheus)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=theopenlane_echo-prometheus&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=theopenlane_echo-prometheus)
+
 # Echo Prometheus
 
 Middleware for echo to instrument all handlers as metrics
@@ -11,7 +14,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/labstack/echo/v4"
+	echo "github.com/theopenlane/echox"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	echoPrometheus "github.com/theopenlane/echo-prometheus"
 )
