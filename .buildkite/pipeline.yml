@@ -41,9 +41,9 @@ steps:
         if: build.pull_request.id != null
         depends_on: ["gosec", "go_test"]
         plugins:
-          - artifacts#v1.9.4:
+          - artifacts#v1.11.0:
               download: "results.txt"
-          - artifacts#v1.9.4:
+          - artifacts#v1.11.0:
               download: "coverage.out"
               step: "go_test"
           - docker#v5.12.0:
@@ -57,9 +57,9 @@ steps:
         if: build.branch == "main"
         depends_on: ["gosec", "go_test"]
         plugins:
-          - artifacts#v1.9.4:
+          - artifacts#v1.11.0:
               download: results.txt
-          - artifacts#v1.9.4:
+          - artifacts#v1.11.0:
               download: coverage.out
               step: "go_test"
           - docker#v5.12.0:
